@@ -1,0 +1,121 @@
+.navbar {
+  background: #fff;
+  border-bottom: 2px solid #e8f0fe;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(26,86,219,0.07);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo-omd {
+  color: #1a56db;
+}
+
+.logo-sub {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #eff6ff;
+  color: #1a56db;
+}
+
+.nav-cta {
+  background: #1a56db !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 9px 18px !important;
+  font-weight: 600 !important;
+}
+
+.nav-cta:hover {
+  background: #1648c0 !important;
+}
+
+.nav-tagline {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #1a56db;
+  background: #eff6ff;
+  padding: 4px 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1e293b;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 2px solid #e8f0fe;
+    padding: 12px 24px 20px;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .navbar { position: relative; }
+}
