@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import useScrollAnimation from '../hooks/useScrollAnimation'
-import './Home.css'
 
 const services = [
   { icon: '🏠', title: 'Residential', desc: 'Flats, villas, apartments — buy, sell or rent.' },
@@ -28,152 +27,128 @@ export default function Home() {
   useScrollAnimation()
 
   return (
-    <main className="home">
+    <main>
 
       {/* ── HERO ── */}
-      <section className="hero">
-        <div className="hero-bg-shapes">
-          <div className="shape shape-1" />
-          <div className="shape shape-2" />
-          <div className="shape shape-3" />
-        </div>
-        <div className="hero-inner">
+<section
+  style={{
+    minHeight: '100vh',
+    background:
+      'linear-gradient(135deg, #001a3d 0%, #002855 50%, #003d73 100%)',
+    position: 'relative',
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: 72,
+  }}
+>        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(255,165,0,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,58,115,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ flex: 1, maxWidth: 1200, margin: '0 auto', padding: '80px 32px 40px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 48, alignItems: 'center', position: 'relative', zIndex: 1, width: '100%' }}>
           <div className="hero-left">
-            <div className="hero-badge">
-              <span className="badge-dot" />
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,165,0,0.25)', color: '#ffd580', fontSize: '0.78rem', fontWeight: 600, padding: '6px 16px', borderRadius: 30, marginBottom: 24, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <span style={{ width: 7, height: 7, background: '#22c55e', borderRadius: '50%', display: 'inline-block' }} />
               Trusted Real Estate Platform
             </div>
-            <h1>
-              Simplifying Property Deals for
-              <span className="hero-highlight"> Brokers &amp; Builders</span>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 900, color: '#fff', lineHeight: 1.15, marginBottom: 20 }}>
+              Simplifying Property Deals for{' '}
+              <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                Brokers & Builders
+              </span>
             </h1>
-            <p className="hero-sub">
-              A smart and structured platform to replace scattered WhatsApp property sharing
-              with a centralized, searchable system.
+            <p style={{ color: '#a8c5e0', fontSize: '1rem', lineHeight: 1.7, marginBottom: 14 }}>
+              A smart and structured platform to replace scattered WhatsApp property sharing with a centralized, searchable system.
             </p>
-            <p className="hero-tagline">
+            <p style={{ fontSize: '0.9rem', fontWeight: 700, color: '#ffa500', marginBottom: 36, letterSpacing: '0.5px' }}>
               🎯 Find the right property faster. Close deals quicker.
             </p>
-            <div className="hero-actions">
-              <Link to="/app#download" className="btn-primary btn-lg">📲 Download App</Link>
-              <Link to="/contact" className="btn-ghost btn-lg">Contact Us →</Link>
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+              <Link to="/app#download" style={{ background: 'linear-gradient(135deg,#ffa500,#ff8c00)', color: '#ffff', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,165,0,0.4)' }}>📲 Download App</Link>
+              <Link to="/contact" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(255,255,255,0.2)', color: '#fff', padding: '14px 32px', borderRadius: 14, fontWeight: 700, fontSize: '1rem', textDecoration: 'none' }}>Contact Us →</Link>
             </div>
           </div>
 
           <div className="hero-right">
-            <div className="hero-card-stack">
-              <div className="hcard hcard-main">
-                <div className="hcard-header">
-                  <span className="hcard-dot green" />
-                  <span className="hcard-dot yellow" />
-                  <span className="hcard-dot red" />
-                  <span className="hcard-title">Live Listings</span>
-                </div>
-                <div className="hcard-row">
-                  <span className="hcard-icon">🏠</span>
-                  <div>
-                    <div className="hcard-name">3BHK Flat – Pune</div>
-                    <div className="hcard-meta">₹85L · Kothrud · Residential</div>
-                  </div>
-                  <span className="hcard-badge-green">Active</span>
-                </div>
-                <div className="hcard-row">
-                  <span className="hcard-icon">🏢</span>
-                  <div>
-                    <div className="hcard-name">Office Space – Mumbai</div>
-                    <div className="hcard-meta">₹1.2Cr · Andheri · Commercial</div>
-                  </div>
-                  <span className="hcard-badge-green">Active</span>
-                </div>
-                <div className="hcard-row">
-                  <span className="hcard-icon">🌍</span>
-                  <div>
-                    <div className="hcard-name">NA Plot – Nashik</div>
-                    <div className="hcard-meta">₹45L · Gangapur · Plot</div>
-                  </div>
-                  <span className="hcard-badge-blue">New</span>
-                </div>
-                <div className="hcard-connect">
-                  <span>📞 Connect with Broker</span>
-                  <span className="hcard-arrow">→</span>
-                </div>
+            <div style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.2)', borderRadius: 24, backdropFilter: 'blur(20px)', padding: 24, display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                <span style={{ width: 10, height: 10, background: '#22c55e', borderRadius: '50%' }} />
+                <span style={{ width: 10, height: 10, background: '#ffa500', borderRadius: '50%' }} />
+                <span style={{ width: 10, height: 10, background: '#ef4444', borderRadius: '50%' }} />
+                <span style={{ marginLeft: 8, fontSize: '0.7rem', fontWeight: 700, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: 1 }}>Live Listings</span>
               </div>
-              <div className="hcard hcard-float">
-                <span className="float-icon">✅</span>
-                <div>
-                  <div className="float-title">Deal Closed!</div>
-                  <div className="float-sub">2BHK · Wakad, Pune</div>
+              {[
+                { icon: '🏠', title: '3BHK Flat – Pune', sub: '₹85L · Kothrud · Residential', badge: 'Active', badgeColor: '#22c55e' },
+                { icon: '🏢', title: 'Office Space – Mumbai', sub: '₹1.2Cr · Andheri · Commercial', badge: 'Active', badgeColor: '#22c55e' },
+                { icon: '🌍', title: 'NA Plot – Nashik', sub: '₹45L · Gangapur · Plot', badge: 'New', badgeColor: '#ffa500' },
+              ].map(item => (
+                <div key={item.title} style={{ display: 'flex', alignItems: 'center', gap: 12, background: 'rgba(255,255,255,0.05)', borderRadius: 12, padding: 12 }}>
+                  <span style={{ fontSize: '1.3rem', flexShrink: 0 }}>{item.icon}</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#f1f5f9' }}>{item.title}</div>
+                    <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: 2 }}>{item.sub}</div>
+                  </div>
+                  <span style={{ background: `${item.badgeColor}22`, color: item.badgeColor, fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: 20, border: `1px solid ${item.badgeColor}55`, flexShrink: 0 }}>{item.badge}</span>
                 </div>
+              ))}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'linear-gradient(135deg,#ffa500,#ff8c00)', borderRadius: 12, padding: '12px 16px', color: '#ffff', fontSize: '0.9rem', fontWeight: 800, cursor: 'pointer' }}>
+                <span>📞 Connect with Broker</span><span>→</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="stats-bar">
-          {stats.map(s => (
-            <div className="stat-item" key={s.label}>
-              <span className="stat-num">{s.num}</span>
-              <span className="stat-label">{s.label}</span>
+<div
+  style={{
+    position: 'relative',
+    zIndex: 10,
+    background: '#fff',
+    borderTop: '1px solid #e5e7eb',
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  }}
+>          {stats.map((s, i) => (
+            <div key={s.label} style={{ flex: 1, minWidth: 140, padding: '28px 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, borderRight: i < stats.length - 1 ? '1px solid rgba(255,165,0,0.1)' : 'none' }}>
+              <span style={{ fontSize: '1.5rem', fontWeight: 900, color: '#3b82f6' }}>{s.num}</span>
+              <span style={{ fontSize: '0.75rem', color: '#a8c5e0', fontWeight: 500 }}>{s.label}</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── ABOUT ── */}
-      <section className="section about-section">
-        <div className="container">
-          <div className="about-grid">
+      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #001a3d 0%, #002855 100%)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 80, alignItems: 'center' }}>
             <div className="about-left anim-fade-left">
-              <div className="section-eyebrow">About Us</div>
-              <h2>A Better Way to Manage Property Listings</h2>
-              <p>
-                Managing property listings across WhatsApp groups is time-consuming and unstructured.
-                Important deals get lost in chats, searching becomes difficult, and follow-ups are missed.
-              </p>
-              <p style={{ marginTop: 14 }}>
-                OMD Broker Associate brings all your property data into one simple, powerful platform
-                built specifically for real estate brokers and builders.
-              </p>
-              <ul className="check-list">
-                <li><span className="check">✓</span> Organize listings in a structured format</li>
-                <li><span className="check">✓</span> Quickly search and filter relevant properties</li>
-                <li><span className="check">✓</span> Connect instantly with other brokers</li>
-                <li><span className="check">✓</span> Save time and increase deal conversions</li>
+              <div style={{ fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, color: '#ffa500', marginBottom: 12 }}>About Us</div>
+              <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 18 }}>A Better Way to Manage Property Listings</h2>
+              <p style={{ color: '#a8c5e0', fontSize: '0.95rem', lineHeight: 1.8, marginBottom: 14 }}>Managing property listings across WhatsApp groups is time-consuming and unstructured. Important deals get lost in chats, searching becomes difficult, and follow-ups are missed.</p>
+              <p style={{ color: '#a8c5e0', fontSize: '0.95rem', lineHeight: 1.8 }}>OMD Broker Associate brings all your property data into one simple, powerful platform built specifically for real estate brokers and builders.</p>
+              <ul style={{ listStyle: 'none', padding: 0, marginTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                {['Organize listings in a structured format', 'Quickly search and filter relevant properties', 'Connect instantly with other brokers', 'Save time and increase deal conversions'].map(t => (
+                  <li key={t} style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: '0.9rem', color: '#d1e3f5', fontWeight: 500 }}>
+                    <span style={{ width: 22, height: 22, background: 'rgba(255,165,0,0.15)', color: '#ffa500', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', fontWeight: 900, flexShrink: 0, border: '1px solid rgba(255,165,0,0.3)' }}>✓</span>
+                    {t}
+                  </li>
+                ))}
               </ul>
-              <Link to="/app" className="btn-primary" style={{ marginTop: 28, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                Explore the App →
-              </Link>
+              <Link to="/app" style={{ background: 'linear-gradient(135deg,#ffa500,#ff8c00)', color: '#ffff', padding: '12px 28px', borderRadius: 12, fontWeight: 800, fontSize: '1rem', display: 'inline-block', marginTop: 28, textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,165,0,0.35)' }}>Explore the App →</Link>
             </div>
             <div className="about-right anim-fade-right">
-              <div className="about-visual">
-                <div className="av-card av-card-1 anim-scale-in delay-1">
-                  <span className="av-icon">📱</span>
-                  <div>
-                    <div className="av-title">Mobile First</div>
-                    <div className="av-desc">Designed for brokers on the go</div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                {[
+                  { icon: '📱', title: 'Mobile First', desc: 'Designed for brokers on the go', accent: '#ffa500' },
+                  { icon: '🔍', title: 'Smart Search', desc: 'Filter by city, type, price & more', accent: '#c084fc' },
+                  { icon: '⚡', title: 'Instant Connect', desc: 'Call or WhatsApp in one tap', accent: '#22d3ee' },
+                  { icon: '🔄', title: 'Auto Refresh', desc: 'Listings stay fresh & relevant', accent: '#22c55e' },
+                ].map((c, i) => (
+                  <div key={c.title} className={`anim-scale-in delay-${i + 1}`} style={{ background: 'rgba(255,255,255,0.05)', border: `1.5px solid ${c.accent}33`, borderTop: `3px solid ${c.accent}`, borderRadius: 16, padding: 20, display: 'flex', alignItems: 'flex-start', gap: 14 }}>
+                    <span style={{ fontSize: '2rem', flexShrink: 0 }}>{c.icon}</span>
+                    <div>
+                      <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#fff', marginBottom: 4 }}>{c.title}</div>
+                      <div style={{ fontSize: '0.78rem', color: '#94a3b8', lineHeight: 1.5 }}>{c.desc}</div>
+                    </div>
                   </div>
-                </div>
-                <div className="av-card av-card-2 anim-scale-in delay-2">
-                  <span className="av-icon">🔍</span>
-                  <div>
-                    <div className="av-title">Smart Search</div>
-                    <div className="av-desc">Filter by city, type, price & more</div>
-                  </div>
-                </div>
-                <div className="av-card av-card-3 anim-scale-in delay-3">
-                  <span className="av-icon">⚡</span>
-                  <div>
-                    <div className="av-title">Instant Connect</div>
-                    <div className="av-desc">Call or WhatsApp in one tap</div>
-                  </div>
-                </div>
-                <div className="av-card av-card-4 anim-scale-in delay-4">
-                  <span className="av-icon">🔄</span>
-                  <div>
-                    <div className="av-title">Auto Refresh</div>
-                    <div className="av-desc">Listings stay fresh & relevant</div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -181,20 +156,22 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="section services-section">
-        <div className="container">
-          <div className="section-header anim-fade-up">
-            <div className="section-eyebrow">Our Services</div>
-            <h2>What We Deal In</h2>
-            <p>From residential flats to commercial spaces — we cover every property type.</p>
+      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #002855 0%, #001a3d 100%)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', maxWidth: 560, margin: '0 auto 56px' }} className="anim-fade-up">
+            <div style={{ fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, color: '#ffa500', marginBottom: 10 }}>Our Services</div>
+            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 12 }}>What We Deal In</h2>
+            <p style={{ color: '#a8c5e0', fontSize: '0.95rem' }}>From residential flats to commercial spaces — we cover every property type.</p>
           </div>
-          <div className="services-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 20 }}>
             {services.map((s, i) => (
-              <div className={`service-card anim-fade-up delay-${i + 1}`} key={s.title}>
-                <div className="sc-icon-wrap">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-                <div className="sc-arrow">→</div>
+              <div key={s.title} className={`anim-fade-up delay-${i + 1}`} style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.15)', borderTop: '3px solid #ffa500', borderRadius: 20, padding: '32px 24px', transition: 'all 0.2s', cursor: 'default' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.08)'; e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(255,165,0,0.15)' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}
+              >
+                <div style={{ fontSize: '2rem', marginBottom: 18 }}>{s.icon}</div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#fff', marginBottom: 10 }}>{s.title}</h3>
+                <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -202,24 +179,22 @@ export default function Home() {
       </section>
 
       {/* ── WHY ── */}
-      <section className="section why-section">
-        <div className="why-bg" />
-        <div className="container why-inner">
+      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #001a3d 0%, #002855 50%, #003d73 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 70% 50%, rgba(255,165,0,0.08) 0%, transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 80, alignItems: 'center', position: 'relative', zIndex: 1 }}>
           <div className="why-left anim-fade-left">
-            <div className="section-eyebrow light">Why Choose Us</div>
-            <h2 className="light-h">Why This Platform Stands Out</h2>
-            <p className="light-p">
-              Built from the ground up for Indian real estate brokers who are tired of
-              managing deals through WhatsApp groups.
-            </p>
-            <Link to="/app#download" className="btn-white" style={{ marginTop: 28, display: 'inline-block' }}>
-              Get Started Free →
-            </Link>
+            <div style={{ fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, color: '#ffa500', marginBottom: 12 }}>Why Choose Us</div>
+            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 18 }}>Why This Platform Stands Out</h2>
+            <p style={{ color: '#a8c5e0', fontSize: '0.95rem', lineHeight: 1.8 }}>Built from the ground up for Indian real estate brokers who are tired of managing deals through WhatsApp groups.</p>
+            <Link to="/app#download" style={{ background: 'linear-gradient(135deg,#ffa500,#ff8c00)', color: '#001a3d', padding: '12px 28px', borderRadius: 12, fontWeight: 800, fontSize: '0.95rem', display: 'inline-block', marginTop: 28, textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,165,0,0.35)' }}>Get Started Free →</Link>
           </div>
-          <div className="why-right">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {why.map((w, i) => (
-              <div className={`why-item anim-fade-right delay-${i + 1}`} key={i}>
-                <span className="why-icon">{w.icon}</span>
+              <div key={i} className={`anim-fade-right delay-${i + 1}`} style={{ display: 'flex', alignItems: 'center', gap: 16, background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,255,255,0.1)', borderRadius: 14, padding: '16px 20px', color: '#d1e3f5', fontSize: '0.92rem', fontWeight: 500, transition: 'all 0.25s', cursor: 'default' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.1)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.4)'; e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.color = '#fff' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.color = '#d1e3f5' }}
+              >
+                <span style={{ fontSize: '1.3rem', flexShrink: 0 }}>{w.icon}</span>
                 <span>{w.text}</span>
               </div>
             ))}
@@ -228,21 +203,19 @@ export default function Home() {
       </section>
 
       {/* ── CONTACT TEASER ── */}
-      <section className="section cta-section">
-        <div className="container cta-inner">
+      <section style={{ padding: '80px 24px', background: 'linear-gradient(160deg, #002855 0%, #001a3d 100%)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', background: 'rgba(255,165,0,0.06)', border: '1.5px solid rgba(255,165,0,0.25)', borderRadius: 24, padding: '56px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 40, flexWrap: 'wrap' }}>
           <div className="cta-text anim-fade-left">
-            <h2>Ready to Close More Deals?</h2>
-            <p>Have questions or want a demo? Reach out — we'd love to help.</p>
-            <div className="cta-chips">
-              <a href="tel:+919209182221" className="chip">📞 +91-9209182221</a>
-              <a href="mailto:omd.brokerassociate@gmail.com" className="chip">✉️ omd.brokerassociate@gmail.com</a>
+            <h2 style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 900, color: '#fff', marginBottom: 10 }}>Ready to Close More Deals?</h2>
+            <p style={{ color: '#a8c5e0', marginBottom: 20 }}>Have questions or want a demo? Reach out — we'd love to help.</p>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <a href="tel:+919209182221" style={{ background: 'rgba(255,255,255,0.06)', border: '1.5px solid rgba(255,165,0,0.3)', color: '#ffd580', padding: '8px 18px', borderRadius: 30, fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none' }}>📞 +91-9209182221</a>
+              <a href="mailto:omd.brokerassociate@gmail.com" style={{ background: 'rgba(255,255,255,0.06)', border: '1.5px solid rgba(255,165,0,0.3)', color: '#ffd580', padding: '8px 18px', borderRadius: 30, fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none' }}>✉️ omd.brokerassociate@gmail.com</a>
             </div>
           </div>
-          <div className="cta-actions anim-fade-right">
-            <Link to="/contact" className="btn-primary btn-lg">Send an Inquiry</Link>
-            <a href="https://wa.me/919209182221" target="_blank" rel="noreferrer" className="btn-whatsapp btn-lg">
-              💬 WhatsApp Us
-            </a>
+          <div className="cta-actions anim-fade-right" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
+            <Link to="/contact" style={{ background: 'linear-gradient(135deg,#ffa500,#ff8c00)', color: '#001a3d', padding: '14px 32px', borderRadius: 12, fontWeight: 800, fontSize: '0.95rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,165,0,0.35)' }}>Send an Inquiry</Link>
+            <a href="https://wa.me/919209182221" target="_blank" rel="noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '14px 32px', borderRadius: 12, fontWeight: 800, fontSize: '0.95rem', textDecoration: 'none' }}>💬 WhatsApp Us</a>
           </div>
         </div>
       </section>

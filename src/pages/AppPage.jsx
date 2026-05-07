@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import useScrollAnimation from '../hooks/useScrollAnimation'
-import './AppPage.css'
+import logoImg from '../assets/image.png'
 
 const steps = [
   { n: '01', icon: '📱', title: 'Register & Get Started', desc: 'Sign up using your mobile number and create your profile in seconds.' },
@@ -11,129 +10,69 @@ const steps = [
 ]
 
 const features = [
-  { icon: '📋', title: 'Structured Listings', desc: 'All properties stored in a clean, organized format — no more messy messages.', color: '#2563eb' },
-  { icon: '🔍', title: 'Smart Search & Filters', desc: 'Find properties by location, price, type and requirements instantly.', color: '#8b5cf6' },
-  { icon: '📞', title: 'Instant Broker Connect', desc: 'Connect with property owners via call or WhatsApp in one tap.', color: '#06b6d4' },
-  { icon: '⏱️', title: 'Auto Expiry & Refresh', desc: 'Listings stay relevant with auto-expiry and refresh functionality.', color: '#f59e0b' },
-  { icon: '📱', title: 'Simple to Use', desc: 'Designed for daily use by brokers — no technical knowledge required.', color: '#22c55e' },
+  { icon: '📋', title: 'Structured Listings', desc: 'All properties stored in a clean, organized format — no more messy messages.', color: '#ffa500' },
+  { icon: '🔍', title: 'Smart Search & Filters', desc: 'Find properties by location, price, type and requirements instantly.', color: '#c084fc' },
+  { icon: '📞', title: 'Instant Broker Connect', desc: 'Connect with property owners via call or WhatsApp in one tap.', color: '#22d3ee' },
+  { icon: '⏱️', title: 'Auto Expiry & Refresh', desc: 'Listings stay relevant with auto-expiry and refresh functionality.', color: '#22c55e' },
+  { icon: '📱', title: 'Simple to Use', desc: 'Designed for daily use by brokers — no technical knowledge required.', color: '#ffa500' },
 ]
 
-const users = [
-  {
-    icon: '🧑💼',
-    title: 'For Brokers',
-    color: '#2563eb',
-    points: [
-      'Manage multiple listings easily',
-      'Find matching properties faster',
-      'Increase deal closure rate',
-      'Connect with other brokers instantly',
-    ],
-  },
-  {
-    icon: '🏗️',
-    title: 'For Builders',
-    color: '#8b5cf6',
-    points: [
-      'Showcase new projects efficiently',
-      'Reach a wider broker network',
-      'Manage project visibility in one place',
-      'Get more inquiries for new launches',
-    ],
-  },
+const benefits = [
+  { icon: '🤝', text: 'Brokers collaborate instead of competing' },
+  { icon: '🏠', text: 'Clients get better, wider property options' },
+  { icon: '⚡', text: 'Deals close faster with shared opportunities' },
+  { icon: '🎯', text: 'No leads go to waste — every inquiry finds a chance' },
+  { icon: '💰', text: 'Stronger network. Smarter deals. Higher earnings.' },
 ]
 
 export default function AppPage() {
-  useScrollAnimation()
-
   return (
-    <main className="app-page">
+    <main>
 
-      {/* ── APP HERO ── */}
-      <section className="app-hero">
-        <div className="app-hero-shapes">
-          <div className="as-1" /><div className="as-2" /><div className="as-3" />
-        </div>
-        <div className="app-hero-inner">
-          <div className="app-hero-left">
-            <div className="app-badge">
-              <span className="badge-dot" />
+      {/* ── HERO ── */}
+      <section style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #001a3d 0%, #002855 50%, #003d73 100%)', display: 'flex', alignItems: 'center', paddingTop: 72, position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(255,165,0,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,58,115,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '80px 32px', width: '100%', position: 'relative', zIndex: 1 }}>
+          <div style={{ maxWidth: 580 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,165,0,0.25)', color: '#ffd580', fontSize: '0.78rem', fontWeight: 600, padding: '6px 16px', borderRadius: 30, marginBottom: 24, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <span style={{ width: 7, height: 7, background: '#22c55e', borderRadius: '50%', display: 'inline-block' }} />
               Now Available on Android &amp; iOS
             </div>
-            <h1>
-              One App for All Your
-              <span className="app-highlight"> Property Deals</span>
+            <h1 style={{ fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 900, color: '#fff', lineHeight: 1.15, marginBottom: 20 }}>
+              One App for All Your{' '}
+              <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                Property Deals
+              </span>
             </h1>
-            <p>
-              The OMD Broker Associate app replaces scattered WhatsApp groups with a
-              centralized, searchable property network — built for Indian brokers and builders.
+            <p style={{ color: '#a8c5e0', fontSize: '1rem', lineHeight: 1.7, marginBottom: 36 }}>
+              The OMD Broker Associate app replaces scattered WhatsApp groups with a centralized, searchable property network — built for Indian brokers and builders.
             </p>
-            <div className="app-hero-actions">
-              <a href="#download" className="btn-primary btn-lg">📲 Download Now</a>
-              <Link to="/contact" className="btn-ghost btn-lg">Request Demo →</Link>
-            </div>
-          </div>
-          <div className="app-hero-right">
-            <div className="app-mockup">
-              <div className="mockup-phone">
-                <div className="mockup-notch" />
-                <div className="mockup-screen">
-                  <div className="ms-header">
-                    <span className="ms-title">OMD Listings</span>
-                    <span className="ms-filter">🔍</span>
-                  </div>
-                  <div className="ms-tabs">
-                    <span className="ms-tab active">All</span>
-                    <span className="ms-tab">Rent</span>
-                    <span className="ms-tab">Sale</span>
-                  </div>
-                  {[
-                    { t: '3BHK Flat', l: 'Kothrud, Pune', p: '₹85L', tag: 'Sale' },
-                    { t: 'Office Space', l: 'Andheri, Mumbai', p: '₹45K/mo', tag: 'Rent' },
-                    { t: 'NA Plot', l: 'Gangapur, Nashik', p: '₹28L', tag: 'Sale' },
-                  ].map((item, i) => (
-                    <div className="ms-card" key={i}>
-                      <div className="ms-card-icon">🏠</div>
-                      <div className="ms-card-info">
-                        <div className="ms-card-title">{item.t}</div>
-                        <div className="ms-card-loc">📍 {item.l}</div>
-                      </div>
-                      <div className="ms-card-right">
-                        <div className="ms-card-price">{item.p}</div>
-                        <div className={`ms-card-tag ${item.tag === 'Rent' ? 'rent' : ''}`}>{item.tag}</div>
-                      </div>
-                    </div>
-                  ))}
-                  <div className="ms-connect-btn">📞 Connect with Broker</div>
-                </div>
-              </div>
-              <div className="mockup-badge">
-                <span>⭐</span>
-                <div>
-                  <div className="mb-title">4.8 Rating</div>
-                  <div className="mb-sub">500+ Brokers</div>
-                </div>
-              </div>
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+              <a href="#download" style={{ background: 'linear-gradient(135deg,#ffa500,#ff8c00)', color: '#001a3d', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,165,0,0.4)' }}>📲 Download Now</a>
+              <Link to="/contact" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', padding: '14px 32px', borderRadius: 14, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.2)' }}>Request Demo →</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="section how-section">
-        <div className="container">
-          <div className="section-header anim-fade-up">
-            <div className="section-eyebrow">Workflow</div>
-            <h2>How the Platform Works</h2>
-            <p>Get started in minutes. No technical knowledge required.</p>
+      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #002855 0%, #001a3d 100%)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Workflow</div>
+            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 12 }}>How the Platform Works</h2>
+            <p style={{ color: '#a8c5e0' }}>Get started in minutes. No technical knowledge required.</p>
           </div>
-          <div className="steps-grid">
-            {steps.map((s, i) => (
-              <div className={`step-card anim-fade-up delay-${i + 1}`} key={s.n}>
-                <div className="step-num">{s.n}</div>
-                <div className="step-icon">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 16 }}>
+            {steps.map(s => (
+              <div key={s.n} style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.15)', borderRadius: 20, padding: '28px 20px', textAlign: 'center', transition: 'all 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.08)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.4)' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.15)' }}
+              >
+                <div style={{ width: 32, height: 32, background: 'rgba(255,165,0,0.15)', color: '#ffa500', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px', fontSize: '0.7rem', fontWeight: 900, border: '1px solid rgba(255,165,0,0.3)' }}>{s.n}</div>
+                <div style={{ fontSize: '2rem', marginBottom: 14 }}>{s.icon}</div>
+                <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#fff', marginBottom: 8 }}>{s.title}</h3>
+                <p style={{ fontSize: '0.8rem', color: '#94a3b8', lineHeight: 1.5 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -141,87 +80,114 @@ export default function AppPage() {
       </section>
 
       {/* ── FEATURES ── */}
-      <section className="section features-section">
-        <div className="container">
-          <div className="section-header anim-fade-up">
-            <div className="section-eyebrow">Features</div>
-            <h2>Key Features</h2>
-            <p>Everything a broker needs to manage deals efficiently.</p>
+      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #001a3d 0%, #002855 100%)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Features</div>
+            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 12 }}>Key Features</h2>
+            <p style={{ color: '#a8c5e0' }}>Everything a broker needs to manage deals efficiently.</p>
           </div>
-          <div className="features-grid">
-            {features.map((f, i) => (
-              <div className={`feature-card anim-scale-in delay-${i + 1}`} key={f.title} style={{ '--fc': f.color }}>
-                <div className="fc-icon-wrap" style={{ background: `${f.color}18`, color: f.color }}>
-                  {f.icon}
-                </div>
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 24 }}>
+            {features.map(f => (
+              <div key={f.title} style={{ background: 'rgba(255,255,255,0.05)', border: `1.5px solid ${f.color}33`, borderTop: `3px solid ${f.color}`, borderRadius: 20, padding: '32px 28px', transition: 'all 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.07)'; e.currentTarget.style.transform = 'translateY(-4px)' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)' }}
+              >
+                <div style={{ width: 52, height: 52, borderRadius: 14, background: `${f.color}18`, color: f.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: 18 }}>{f.icon}</div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#fff', marginBottom: 10 }}>{f.title}</h3>
+                <p style={{ fontSize: '0.88rem', color: '#94a3b8', lineHeight: 1.6 }}>{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── USERS ── */}
-      <section className="section users-section">
-        <div className="container">
-          <div className="section-header anim-fade-up">
-            <div className="section-eyebrow">Who It's For</div>
-            <h2>Built for Real Estate Professionals</h2>
-            <p>Whether you're a broker or a builder, this platform is made for you.</p>
+      {/* ── WHY OMD ── */}
+      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #001a3d 0%, #002855 50%, #003d73 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(255,165,0,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,58,115,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Why OMD</div>
+            <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#fff', marginBottom: 14 }}>
+              Why Use{' '}
+              <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                One More Deal?
+              </span>
+            </h2>
+            <p style={{ color: '#a8c5e0', fontSize: '1rem', maxWidth: 560, margin: '0 auto' }}>
+              Because every lead deserves <span style={{ color: '#ffa500', fontWeight: 700 }}>one more chance.</span>
+            </p>
           </div>
-          <div className="users-grid">
-            <div className="user-card anim-fade-left" style={{ '--uc': users[0].color }}>
-              <div className="uc-icon">{users[0].icon}</div>
-              <h3>{users[0].title}</h3>
-              <ul>
-                {users[0].points.map(p => (
-                  <li key={p}><span className="uc-check" style={{ color: users[0].color }}>✓</span>{p}</li>
-                ))}
-              </ul>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 48, alignItems: 'start' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              <img src={logoImg} alt="OMD Logo" style={{ width: 160, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 6px 24px rgba(255,165,0,0.5))' }} />
+              <div style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.25)', borderRadius: 20, padding: 28 }}>
+                <div style={{ fontSize: '0.72rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '1.8px', color: '#ffa500', marginBottom: 14 }}>The Problem We Solve</div>
+                <p style={{ color: '#a8c5e0', fontSize: '0.94rem', lineHeight: 1.8, margin: 0 }}>
+                  A broker has a client, but no matching property.<br />
+                  Another broker has inventory, but no matching client.
+                </p>
+                <p style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, marginTop: 14, marginBottom: 0 }}>
+                  One More Deal connects them —{' '}
+                  <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900 }}>instantly.</span>
+                </p>
+              </div>
+              <div style={{ background: 'rgba(255,165,0,0.08)', border: '1.5px solid rgba(255,165,0,0.3)', borderLeft: '4px solid #ffa500', borderRadius: 14, padding: '20px 22px' }}>
+                <p style={{ color: '#d1e3f5', fontSize: '0.92rem', lineHeight: 1.8, margin: 0 }}>
+                  When a resale client doesn't find the perfect property, simply redirect them to the right new builder projects through our powerful broker network.
+                </p>
+              </div>
+              <div style={{ fontSize: '0.88rem', fontWeight: 800, background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '0.8px', textTransform: 'uppercase', paddingTop: 12, borderTop: '1px solid rgba(255,165,0,0.25)' }}>
+                More connections. More options. More closures.
+              </div>
             </div>
-            <div className="user-card anim-fade-right" style={{ '--uc': users[1].color }}>
-              <div className="uc-icon">{users[1].icon}</div>
-              <h3>{users[1].title}</h3>
-              <ul>
-                {users[1].points.map(p => (
-                  <li key={p}><span className="uc-check" style={{ color: users[1].color }}>✓</span>{p}</li>
-                ))}
-              </ul>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              {benefits.map((b, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 18, background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,255,255,0.1)', borderRadius: 16, padding: '18px 22px', color: '#d1e3f5', fontSize: '0.95rem', fontWeight: 500, transition: 'all 0.3s', cursor: 'default' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.12)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.45)'; e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(255,165,0,0.2)' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.color = '#d1e3f5'; e.currentTarget.style.boxShadow = 'none' }}
+                >
+                  <span style={{ fontSize: '1.4rem', flexShrink: 0 }}>{b.icon}</span>
+                  <span>{b.text}</span>
+                </div>
+              ))}
+              <div style={{ marginTop: 8, background: 'linear-gradient(135deg, rgba(255,165,0,0.15), rgba(255,140,0,0.08))', border: '1.5px solid rgba(255,165,0,0.4)', borderRadius: 16, padding: '22px 24px', textAlign: 'center' }}>
+                <div style={{ fontSize: '1.1rem', fontWeight: 900, color: '#fff', marginBottom: 6 }}>One More Deal™</div>
+                <div style={{ fontSize: '0.85rem', background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 700, letterSpacing: '0.5px' }}>
+                  Because every lead deserves one more chance.
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── DOWNLOAD ── */}
-      <section className="section download-section" id="download">
-        <div className="download-bg" />
-        <div className="container download-inner">
-          <div className="dl-text anim-fade-up">
-            <div className="section-eyebrow light">Download</div>
-            <h2 className="dl-h">Start Closing More Deals Today</h2>
-            <p className="dl-p">
-              Join the growing network of brokers and builders using a smarter way
-              to manage property listings.
-            </p>
-          </div>
-          <div className="dl-buttons anim-scale-in delay-2">
-            <a href="#" className="store-btn">
-              <div className="store-icon-wrap android">▶</div>
-              <div className="store-text">
-                <small>Get it on</small>
-                <strong>Google Play</strong>
+      <section id="download" style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #002855 0%, #001a3d 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 0%, rgba(255,165,0,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Download</div>
+          <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#fff', marginBottom: 14 }}>Start Closing More Deals Today</h2>
+          <p style={{ color: '#a8c5e0', fontSize: '1rem', maxWidth: 520, marginBottom: 44, lineHeight: 1.7 }}>Join the growing network of brokers and builders using a smarter way to manage property listings.</p>
+          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
+            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(255,165,0,0.08)', border: '1.5px solid rgba(255,165,0,0.3)', color: '#fff', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
+              <div style={{ width: 40, height: 40, borderRadius: 10, background: '#22c55e', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}>▶</div>
+              <div style={{ textAlign: 'left' }}>
+                <small style={{ display: 'block', fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>Get it on</small>
+                <strong style={{ fontSize: '1rem' }}>Google Play</strong>
               </div>
             </a>
-            <a href="#" className="store-btn">
-              <div className="store-icon-wrap ios"></div>
-              <div className="store-text">
-                <small>Download on the</small>
-                <strong>App Store</strong>
+            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(255,165,0,0.08)', border: '1.5px solid rgba(255,165,0,0.3)', color: '#fff', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
+              <div style={{ width: 40, height: 40, borderRadius: 10, background: '#f1f5f9', color: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}></div>
+              <div style={{ textAlign: 'left' }}>
+                <small style={{ display: 'block', fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>Download on the</small>
+                <strong style={{ fontSize: '1rem' }}>App Store</strong>
               </div>
             </a>
           </div>
-          <p className="dl-note anim-fade-up delay-3">App store links will be updated once live.</p>
+          <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.3)' }}>App store links will be updated once live.</p>
         </div>
       </section>
 

@@ -4,9 +4,12 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import AppPage from './pages/AppPage'
 import Contact from './pages/Contact'
+import "./App.css"
 
 export default function App() {
   return (
+
+    <div className='hello'>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -16,5 +19,6 @@ export default function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </div>
   )
 }

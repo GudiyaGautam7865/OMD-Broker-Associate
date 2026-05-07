@@ -1,11 +1,12 @@
-*, *::before, *::after { box-sizing: border-box; }
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', system-ui, Roboto, sans-serif;
-  color: #1e293b;
-  background: #fff;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
 }
 
 #root {
@@ -15,9 +16,31 @@ body {
   width: 100%;
 }
 
-main { flex: 1; }
-h1, h2, h3, h4 { margin: 0; line-height: 1.2; }
-p { margin: 0; line-height: 1.7; }
-a { text-decoration: none; }
-ul { margin: 0; padding: 0; list-style: none; }
-img { max-width: 100%; display: block; }
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
