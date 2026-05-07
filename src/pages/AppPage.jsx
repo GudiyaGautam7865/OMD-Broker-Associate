@@ -172,22 +172,22 @@ export default function AppPage() {
           <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#3b82f6', marginBottom: 14 }}>Start Closing More Deals Today</h2>
           <p style={{ color: '#0077b6', fontSize: '1rem', maxWidth: 520, marginBottom: 44, lineHeight: 1.7 }}>Join the growing network of brokers and builders using a smarter way to manage property listings.</p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
-            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', color: '#3b82f6', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
+            <a href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', color: '#3b82f6', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
               <div style={{ width: 40, height: 40, borderRadius: 10, background: '#22c55e', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}>▶</div>
               <div style={{ textAlign: 'left' }}>
                 <small style={{ display: 'block', fontSize: '0.68rem', color: '#3b82f6', marginBottom: 2 }}>Get it on</small>
                 <strong style={{ fontSize: '1rem' }}>Google Play</strong>
               </div>
             </a>
-            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', color: '#3b82f6', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
-              <div style={{ width: 40, height: 40, borderRadius: 10, background: '#f1f5f9', color: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}></div>
+            <a href="https://apps.apple.com/in/app/one-more-deal/id6763114774" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', color: '#3b82f6', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
+              <div style={{ width: 40, height: 40, borderRadius: 10, background: '#f1f5f9', color: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}></div>
               <div style={{ textAlign: 'left' }}>
                 <small style={{ display: 'block', fontSize: '0.68rem', color: '#3b82f6', marginBottom: 2 }}>Download on the</small>
                 <strong style={{ fontSize: '1rem' }}>App Store</strong>
               </div>
             </a>
           </div>
-          <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.3)' }}>App store links will be updated once live.</p>
+          <p style={{ fontSize: '0.78rem', color: '#334155' }}>Download the app directly from Google Play or the Apple App Store.</p>
         </div>
       </section>
 
