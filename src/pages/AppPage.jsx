@@ -10,11 +10,11 @@ const steps = [
 ]
 
 const features = [
-  { icon: '📋', title: 'Structured Listings', desc: 'All properties stored in a clean, organized format — no more messy messages.', color: '#ffa500' },
+  { icon: '📋', title: 'Structured Listings', desc: 'All properties stored in a clean, organized format — no more messy messages.', color: '#3b82f6' },
   { icon: '🔍', title: 'Smart Search & Filters', desc: 'Find properties by location, price, type and requirements instantly.', color: '#c084fc' },
   { icon: '📞', title: 'Instant Broker Connect', desc: 'Connect with property owners via call or WhatsApp in one tap.', color: '#22d3ee' },
   { icon: '⏱️', title: 'Auto Expiry & Refresh', desc: 'Listings stay relevant with auto-expiry and refresh functionality.', color: '#22c55e' },
-  { icon: '📱', title: 'Simple to Use', desc: 'Designed for daily use by brokers — no technical knowledge required.', color: '#ffa500' },
+  { icon: '📱', title: 'Simple to Use', desc: 'Designed for daily use by brokers — no technical knowledge required.', color: '#3b82f6' },
 ]
 
 const benefits = [
@@ -30,17 +30,17 @@ export default function AppPage() {
     <main>
 
       {/* ── HERO ── */}
-      <section style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #001a3d 0%, #002855 50%, #003d73 100%)', display: 'flex', alignItems: 'center', paddingTop: 72, position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(255,165,0,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,58,115,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
+      <section style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)', display: 'flex', alignItems: 'center', paddingTop: 72, position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(59,130,246,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '80px 32px', width: '100%', position: 'relative', zIndex: 1 }}>
           <div style={{ maxWidth: 580 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,165,0,0.25)', color: '#ffd580', fontSize: '0.78rem', fontWeight: 600, padding: '6px 16px', borderRadius: 30, marginBottom: 24, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,165,0,0.25)', color: '#bfdbfe', fontSize: '0.78rem', fontWeight: 600, padding: '6px 16px', borderRadius: 30, marginBottom: 24, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               <span style={{ width: 7, height: 7, background: '#22c55e', borderRadius: '50%', display: 'inline-block' }} />
               Now Available on Android &amp; iOS
             </div>
             <h1 style={{ fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 900, color: '#fff', lineHeight: 1.15, marginBottom: 20 }}>
               One App for All Your{' '}
-              <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <span style={{ background: 'linear-gradient(90deg,#3b82f6,#2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Property Deals
               </span>
             </h1>
@@ -48,7 +48,7 @@ export default function AppPage() {
               The OMD Broker Associate app replaces scattered WhatsApp groups with a centralized, searchable property network — built for Indian brokers and builders.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-              <a href="#download" style={{ background: 'linear-gradient(135deg,#ffa500,#ff8c00)', color: '#001a3d', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,165,0,0.4)' }}>📲 Download Now</a>
+              <a href="#download" style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)', color: '#ffff', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(37,99,235,0.4)' }}>📲 Download Now</a>
               <Link to="/contact" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', padding: '14px 32px', borderRadius: 14, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.2)' }}>Request Demo →</Link>
             </div>
           </div>
@@ -56,23 +56,23 @@ export default function AppPage() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #002855 0%, #001a3d 100%)' }}>
+      <section className="bg-slate-50 py-20 px-6">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Workflow</div>
-            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 12 }}>How the Platform Works</h2>
-            <p style={{ color: '#a8c5e0' }}>Get started in minutes. No technical knowledge required.</p>
+            <div style={{ color: '#3b82f6', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Workflow</div>
+            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#3b82f6', marginBottom: 12 }}>How the Platform Works</h2>
+            <p style={{ color: '#0077b6' }}>Get started in minutes. No technical knowledge required.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 16 }}>
             {steps.map(s => (
-              <div key={s.n} style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.15)', borderRadius: 20, padding: '28px 20px', textAlign: 'center', transition: 'all 0.2s' }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.08)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.4)' }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.15)' }}
+              <div key={s.n} style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(37,99,235,0.15)', borderRadius: 20, padding: '28px 20px', textAlign: 'center', transition: 'all 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(37,99,235,0.08)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = 'rgba(37,99,235,0.4)' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(37,99,235,0.15)' }}
               >
-                <div style={{ width: 32, height: 32, background: 'rgba(255,165,0,0.15)', color: '#ffa500', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px', fontSize: '0.7rem', fontWeight: 900, border: '1px solid rgba(255,165,0,0.3)' }}>{s.n}</div>
+                <div style={{ width: 32, height: 32, background: 'rgba(37,99,235,0.15)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px', fontSize: '0.7rem', fontWeight: 900, border: '1px solid rgba(37,99,235,0.3)' }}>{s.n}</div>
                 <div style={{ fontSize: '2rem', marginBottom: 14 }}>{s.icon}</div>
-                <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#fff', marginBottom: 8 }}>{s.title}</h3>
-                <p style={{ fontSize: '0.8rem', color: '#94a3b8', lineHeight: 1.5 }}>{s.desc}</p>
+                <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#3b82f6', marginBottom: 8 }}>{s.title}</h3>
+                <p style={{ fontSize: '0.8rem', color: '#0077b6', lineHeight: 1.5 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -80,12 +80,12 @@ export default function AppPage() {
       </section>
 
       {/* ── FEATURES ── */}
-      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #001a3d 0%, #002855 100%)' }}>
+      <section className="bg-slate-50 py-20 px-6">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Features</div>
-            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#fff', marginBottom: 12 }}>Key Features</h2>
-            <p style={{ color: '#a8c5e0' }}>Everything a broker needs to manage deals efficiently.</p>
+            <div style={{ color: '#3b82f6', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Features</div>
+            <h2 style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 900, color: '#3b82f6', marginBottom: 12 }}>Key Features</h2>
+            <p style={{ color: '#0077b6' }}>Everything a broker needs to manage deals efficiently.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 24 }}>
             {features.map(f => (
@@ -94,8 +94,8 @@ export default function AppPage() {
                 onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.transform = 'translateY(0)' }}
               >
                 <div style={{ width: 52, height: 52, borderRadius: 14, background: `${f.color}18`, color: f.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: 18 }}>{f.icon}</div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#fff', marginBottom: 10 }}>{f.title}</h3>
-                <p style={{ fontSize: '0.88rem', color: '#94a3b8', lineHeight: 1.6 }}>{f.desc}</p>
+                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#3b82f6', marginBottom: 10 }}>{f.title}</h3>
+                <p style={{ fontSize: '0.88rem', color: '#0077b6', lineHeight: 1.6 }}>{f.desc}</p>
               </div>
             ))}
           </div>
@@ -103,19 +103,19 @@ export default function AppPage() {
       </section>
 
       {/* ── WHY OMD ── */}
-      <section style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #001a3d 0%, #002855 50%, #003d73 100%)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(255,165,0,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,58,115,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
+      <section className="bg-slate-50 py-20 px-6">
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(59,130,246,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Why OMD</div>
-            <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#fff', marginBottom: 14 }}>
+            <div style={{ color: '#3b82f6', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Why OMD</div>
+            <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#0077b6', marginBottom: 14 }}>
               Why Use{' '}
-              <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <span style={{ background: 'linear-gradient(90deg,#3b82f6,#2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 One More Deal?
               </span>
             </h2>
-            <p style={{ color: '#a8c5e0', fontSize: '1rem', maxWidth: 560, margin: '0 auto' }}>
-              Because every lead deserves <span style={{ color: '#ffa500', fontWeight: 700 }}>one more chance.</span>
+            <p style={{ color: '#0077b6', fontSize: '1rem', maxWidth: 560, margin: '0 auto' }}>
+              Because every lead deserves <span style={{ color: '#3b82f6', fontWeight: 700 }}>one more chance.</span>
             </p>
           </div>
 
@@ -123,39 +123,39 @@ export default function AppPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
               <img src={logoImg} alt="OMD Logo" style={{ width: 160, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 6px 24px rgba(255,165,0,0.5))' }} />
               <div style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.25)', borderRadius: 20, padding: 28 }}>
-                <div style={{ fontSize: '0.72rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '1.8px', color: '#ffa500', marginBottom: 14 }}>The Problem We Solve</div>
+                <div style={{ fontSize: '0.72rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '1.8px', color: '#3b82f6', marginBottom: 14 }}>The Problem We Solve</div>
                 <p style={{ color: '#a8c5e0', fontSize: '0.94rem', lineHeight: 1.8, margin: 0 }}>
                   A broker has a client, but no matching property.<br />
                   Another broker has inventory, but no matching client.
                 </p>
-                <p style={{ color: '#fff', fontSize: '1rem', fontWeight: 700, marginTop: 14, marginBottom: 0 }}>
+                <p style={{ color: '#3b82f6', fontSize: '1rem', fontWeight: 700, marginTop: 14, marginBottom: 0 }}>
                   One More Deal connects them —{' '}
-                  <span style={{ background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900 }}>instantly.</span>
+                  <span style={{ background: 'linear-gradient(90deg,#3b82f6,#2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900 }}>instantly.</span>
                 </p>
               </div>
-              <div style={{ background: 'rgba(255,165,0,0.08)', border: '1.5px solid rgba(255,165,0,0.3)', borderLeft: '4px solid #ffa500', borderRadius: 14, padding: '20px 22px' }}>
-                <p style={{ color: '#d1e3f5', fontSize: '0.92rem', lineHeight: 1.8, margin: 0 }}>
+              <div style={{ background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', borderLeft: '4px solid #3b82f6', borderRadius: 14, padding: '20px 22px' }}>
+                <p style={{ color: '#3b82f6', fontSize: '0.92rem', lineHeight: 1.8, margin: 0 }}>
                   When a resale client doesn't find the perfect property, simply redirect them to the right new builder projects through our powerful broker network.
                 </p>
               </div>
-              <div style={{ fontSize: '0.88rem', fontWeight: 800, background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '0.8px', textTransform: 'uppercase', paddingTop: 12, borderTop: '1px solid rgba(255,165,0,0.25)' }}>
+              <div style={{ fontSize: '0.88rem', fontWeight: 800, background: 'linear-gradient(90deg,#3b82f6,#2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '0.8px', textTransform: 'uppercase', paddingTop: 12, borderTop: '1px solid rgba(255,165,0,0.25)' }}>
                 More connections. More options. More closures.
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <div style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(37,99,235,0.2)', borderRadius: 26, backdropFilter: 'blur(20px)', padding: 24, display: 'flex', flexDirection: 'column', gap: 16 }}>
               {benefits.map((b, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 18, background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,255,255,0.1)', borderRadius: 16, padding: '18px 22px', color: '#d1e3f5', fontSize: '0.95rem', fontWeight: 500, transition: 'all 0.3s', cursor: 'default' }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,165,0,0.12)'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.45)'; e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(255,165,0,0.2)' }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.color = '#d1e3f5'; e.currentTarget.style.boxShadow = 'none' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = '#3b82f6'; e.currentTarget.style.borderColor = 'rgba(255,165,0,0.45)'; e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(255,165,0,0.2)' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = '#0077b6'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.color = '#d1e3f5'; e.currentTarget.style.boxShadow = 'none' }}
                 >
                   <span style={{ fontSize: '1.4rem', flexShrink: 0 }}>{b.icon}</span>
                   <span>{b.text}</span>
                 </div>
               ))}
-              <div style={{ marginTop: 8, background: 'linear-gradient(135deg, rgba(255,165,0,0.15), rgba(255,140,0,0.08))', border: '1.5px solid rgba(255,165,0,0.4)', borderRadius: 16, padding: '22px 24px', textAlign: 'center' }}>
+              <div style={{ marginTop: 8, background: 'linear-gradient(135deg, rgba(37,99,235,0.15), rgba(255,140,0,0.08))', border: '1.5px solid rgba(37,99,235,0.4)', borderRadius: 16, padding: '22px 24px', textAlign: 'center' }}>
                 <div style={{ fontSize: '1.1rem', fontWeight: 900, color: '#fff', marginBottom: 6 }}>One More Deal™</div>
-                <div style={{ fontSize: '0.85rem', background: 'linear-gradient(90deg,#ffa500,#ff8c00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 700, letterSpacing: '0.5px' }}>
+                <div style={{ fontSize: '0.85rem', background: 'linear-gradient(90deg,#3b82f6,#2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 700, letterSpacing: '0.5px' }}>
                   Because every lead deserves one more chance.
                 </div>
               </div>
@@ -165,24 +165,24 @@ export default function AppPage() {
       </section>
 
       {/* ── DOWNLOAD ── */}
-      <section id="download" style={{ padding: '96px 24px', background: 'linear-gradient(160deg, #002855 0%, #001a3d 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 0%, rgba(255,165,0,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
+      <section className="bg-slate-50 py-20 px-6">
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ color: '#ffa500', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Download</div>
-          <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#fff', marginBottom: 14 }}>Start Closing More Deals Today</h2>
-          <p style={{ color: '#a8c5e0', fontSize: '1rem', maxWidth: 520, marginBottom: 44, lineHeight: 1.7 }}>Join the growing network of brokers and builders using a smarter way to manage property listings.</p>
+          <div style={{ color: '#3b82f6', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2, marginBottom: 10 }}>Download</div>
+          <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 900, color: '#3b82f6', marginBottom: 14 }}>Start Closing More Deals Today</h2>
+          <p style={{ color: '#0077b6', fontSize: '1rem', maxWidth: 520, marginBottom: 44, lineHeight: 1.7 }}>Join the growing network of brokers and builders using a smarter way to manage property listings.</p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
-            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(255,165,0,0.08)', border: '1.5px solid rgba(255,165,0,0.3)', color: '#fff', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
+            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', color: '#3b82f6', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
               <div style={{ width: 40, height: 40, borderRadius: 10, background: '#22c55e', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}>▶</div>
               <div style={{ textAlign: 'left' }}>
-                <small style={{ display: 'block', fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>Get it on</small>
+                <small style={{ display: 'block', fontSize: '0.68rem', color: '#3b82f6', marginBottom: 2 }}>Get it on</small>
                 <strong style={{ fontSize: '1rem' }}>Google Play</strong>
               </div>
             </a>
-            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(255,165,0,0.08)', border: '1.5px solid rgba(255,165,0,0.3)', color: '#fff', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
+            <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'rgba(37,99,235,0.08)', border: '1.5px solid rgba(37,99,235,0.3)', color: '#3b82f6', padding: '16px 28px', borderRadius: 16, textDecoration: 'none', minWidth: 190 }}>
               <div style={{ width: 40, height: 40, borderRadius: 10, background: '#f1f5f9', color: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', flexShrink: 0 }}></div>
               <div style={{ textAlign: 'left' }}>
-                <small style={{ display: 'block', fontSize: '0.68rem', color: 'rgba(255,255,255,0.5)', marginBottom: 2 }}>Download on the</small>
+                <small style={{ display: 'block', fontSize: '0.68rem', color: '#3b82f6', marginBottom: 2 }}>Download on the</small>
                 <strong style={{ fontSize: '1rem' }}>App Store</strong>
               </div>
             </a>
