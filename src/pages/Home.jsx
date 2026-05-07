@@ -354,59 +354,137 @@ export default function Home() {
   </div>
 
   {/* STATS */}
-  <div
-    style={{
-      position: 'relative',
-      zIndex: 10,
-      background: '#fff',
-      borderTop: '1px solid #e5e7eb',
-      display: 'flex',
-      justifyContent: 'center',
-      flexWrap: 'wrap',
-    }}
-  >
-    {stats.map((s, i) => (
+<div
+  style={{
+    position: 'relative',
+    zIndex: 10,
+    background: '#fff',
+    borderTop: '1px solid #e5e7eb',
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    overflow: 'hidden',
+  }}
+>
+  {stats.map((s, i) => (
+    <div
+      key={s.label}
+      className="stats-box"
+      style={{
+        flex: 1,
+        minWidth: 140,
+        padding: '28px 16px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 4,
+        borderRight:
+          i < stats.length - 1
+            ? '1px solid rgba(255,165,0,0.1)'
+            : 'none',
+        transition: 'all 0.4s ease',
+        cursor: 'pointer',
+        position: 'relative',
+        animation: `fadeUp 0.6s ease forwards`,
+        animationDelay: `${i * 0.2}s`,
+        opacity: 0,
+      }}
+    >
+      {/* Glow Effect */}
       <div
-        key={s.label}
-        className="stats-box"
         style={{
-          flex: 1,
-          minWidth: 140,
-          padding: '28px 16px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 4,
-          borderRight:
-            i < stats.length - 1
-              ? '1px solid rgba(255,165,0,0.1)'
-              : 'none',
-          transition: 'all 0.3s ease',
-          cursor: 'pointer',
+          position: 'absolute',
+          inset: 0,
+          background:
+            'linear-gradient(135deg, rgba(59,130,246,0.08), rgba(37,99,235,0.03))',
+          opacity: 0,
+          transition: '0.4s ease',
+          borderRadius: 12,
+        }}
+        className="stats-glow"
+      />
+
+      {/* Number */}
+      <span
+        className="stats-number"
+        style={{
+          fontSize: '1.8rem',
+          fontWeight: 900,
+          color: '#3b82f6',
+          position: 'relative',
+          zIndex: 2,
+          transition: '0.3s ease',
         }}
       >
-        <span
-          style={{
-            fontSize: '1.5rem',
-            fontWeight: 900,
-            color: '#3b82f6',
-          }}
-        >
-          {s.num}
-        </span>
+        {s.num}
+      </span>
 
-        <span
-          style={{
-            fontSize: '0.75rem',
-            color: '#64748b',
-            fontWeight: 600,
-          }}
-        >
-          {s.label}
-        </span>
-      </div>
-    ))}
-  </div>
+      {/* Label */}
+      <span
+        style={{
+          fontSize: '0.8rem',
+          color: '#64748b',
+          fontWeight: 600,
+          position: 'relative',
+          zIndex: 2,
+        }}
+      >
+        {s.label}
+      </span>
+    </div>
+  ))}
+
+  {/* CSS */}
+  <style>
+    {`
+      /* Fade Animation */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Hover Animation */
+      .stats-box:hover {
+        transform: translateY(-10px) scale(1.05);
+        background: rgba(59,130,246,0.03);
+      }
+
+      .stats-box:hover .stats-glow {
+        opacity: 1;
+      }
+
+      .stats-box:hover .stats-number {
+        transform: scale(1.15);
+        color: #2563eb;
+      }
+
+      /* Floating Effect */
+      .stats-box {
+        animation-fill-mode: forwards;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .stats-box {
+          min-width: 50%;
+          border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .stats-box {
+          min-width: 100%;
+        }
+      }
+    `}
+  </style>
+</div>
 
   {/* CSS */}
   <style>
