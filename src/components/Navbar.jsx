@@ -216,7 +216,7 @@ export default function Navbar() {
                 to="/app#download"
                 className="mt-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-center px-5 py-3 rounded-2xl font-bold shadow-lg hover:scale-[1.02] transition-all duration-300 no-underline"
               >
-                📲 Download App
+              <a href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal" target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)', color: '#ffff', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(37,99,235,0.4)' }}>📲 Download Now</a>
               </Link>
             </div>
           </div>

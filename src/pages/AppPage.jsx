@@ -1,5 +1,20 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import logoImg from '../assets/image.png'
+
+// Import app screenshots
+import screen1 from '../assets/app-screen-1.png'
+import screen2 from '../assets/app-screen-2.png'
+import screen3 from '../assets/app-screen-3.png'
+import screen4 from '../assets/app-screen-4.png'
+
+// Demo carousel images with actual screenshots
+const demoImages = [
+  { id: 1, step: 'Hero', title: 'Close Deals Faster', image: screen1 },
+  { id: 2, step: 'Discover', title: 'Explore Listings', image: screen2 },
+  { id: 3, step: 'My Listings', title: 'Manage Your Properties', image: screen3 },
+  { id: 4, step: 'Search', title: 'Find Properties', image: screen4 },
+]
 
 const steps = [
   { n: '01', icon: '📱', title: 'Register & Get Started', desc: 'Sign up using your mobile number and create your profile in seconds.' },
@@ -26,13 +41,22 @@ const benefits = [
 ]
 
 export default function AppPage() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % demoImages.length)
+    }, 4000) // Change slide every 4 seconds
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <main>
 
       {/* ── HERO ── */}
       <section style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)', display: 'flex', alignItems: 'center', paddingTop: 72, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(59,130,246,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '80px 32px', width: '100%', position: 'relative', zIndex: 1 }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto', padding: '80px 32px', width: '100%', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: 48, alignItems: 'center' }}>
           <div style={{ maxWidth: 580 }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,165,0,0.25)', color: '#bfdbfe', fontSize: '0.78rem', fontWeight: 600, padding: '6px 16px', borderRadius: 30, marginBottom: 24, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               <span style={{ width: 7, height: 7, background: '#22c55e', borderRadius: '50%', display: 'inline-block' }} />
@@ -48,9 +72,81 @@ export default function AppPage() {
               The OMD Broker Associate app replaces scattered WhatsApp groups with a centralized, searchable property network — built for Indian brokers and builders.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-              <a href="#download" style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)', color: '#ffff', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(37,99,235,0.4)' }}>📲 Download Now</a>
+              <a href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal" target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)', color: '#ffff', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(37,99,235,0.4)' }}>📲 Download Now</a>
               <Link to="/contact" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', padding: '14px 32px', borderRadius: 14, fontWeight: 700, fontSize: '1rem', textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.2)' }}>Request Demo →</Link>
             </div>
+          </div>
+
+          {/* ── APP CAROUSEL DEMO ── */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', height: '10%', minHeight: 100 }}>
+            <div style={{ position: 'relative', width: '40%', maxWidth: 340, aspectRatio: '9/19', borderRadius: 32, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.4)', border: '9px solid rgba(255,255,255,0.1)' }}>
+              {/* Carousel slides */}
+              {demoImages.map((image, idx) => (
+                <div
+                  key={image.id}
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: `url(${image.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'flex-end',
+                    gap: 20,
+                    opacity: currentSlide === idx ? 1 : 0,
+                    transition: 'opacity 0.8s ease-in-out',
+                    pointerEvents: currentSlide === idx ? 'auto' : 'none',
+                    padding: 20,
+                  }}
+                >
+                  {/* Gradient overlay for text readability */}
+                  <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 100%)',
+                    pointerEvents: 'none',
+                  }} />
+                  
+                  {/* Text content */}
+                  <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', color: '#fff', marginBottom: 16 }}>
+                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.9)', marginBottom: 6, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1 }}>Step {idx + 1}</div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Slide indicators */}
+              <div style={{ position: 'absolute', bottom: 16, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 8, zIndex: 10 }}>
+                {demoImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    style={{
+                      width: currentSlide === idx ? 24 : 8,
+                      height: 8,
+                      background: currentSlide === idx ? '#fff' : 'rgba(255,255,255,0.4)',
+                      border: 'none',
+                      borderRadius: 4,
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                    }}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Floating glow effect */}
+            <div style={{
+              position: 'absolute',
+              width: 400,
+              height: 400,
+              background: 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)',
+              borderRadius: '50%',
+              filter: 'blur(40px)',
+              zIndex: -1,
+            }} />
           </div>
         </div>
       </section>
