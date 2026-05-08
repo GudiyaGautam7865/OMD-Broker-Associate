@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/image.png'
 
 export default function Footer() {
   return (
@@ -6,7 +7,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-16 px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-12">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-11 h-11 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center text-white font-black text-lg flex-shrink-0">O</div>
+            <div className="w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center bg-white/10 shadow-lg flex-shrink-0">
+              <img src={logo} alt="OMD Logo" className="w-full h-full object-contain" />
+            </div>
             <div>
               <div className="text-base font-extrabold text-slate-100">OMD Broker Associate</div>
               <div className="text-xs text-blue-400 font-medium mt-0.5">From WhatsApp Chaos to Structured Deals</div>

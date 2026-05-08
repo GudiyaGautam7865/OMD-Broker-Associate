@@ -217,7 +217,7 @@ export default function AppPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 48, alignItems: 'start' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <img src={logoImg} alt="OMD Logo" style={{ width: 160, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 6px 24px rgba(255,165,0,0.5))' }} />
+              <img src={logoImg} alt="OMD Logo" style={{ width: 220, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 6px 24px rgba(255,165,0,0.5))' }} />
               <div style={{ background: 'rgba(255,255,255,0.05)', border: '1.5px solid rgba(255,165,0,0.25)', borderRadius: 20, padding: 28 }}>
                 <div style={{ fontSize: '0.72rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '1.8px', color: '#3b82f6', marginBottom: 14 }}>The Problem We Solve</div>
                 <p style={{ color: '#a8c5e0', fontSize: '0.94rem', lineHeight: 1.8, margin: 0 }}>

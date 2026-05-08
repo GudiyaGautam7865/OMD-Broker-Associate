@@ -33,7 +33,7 @@ export default function Navbar() {
           to="/"
           className="flex items-center gap-3 no-underline z-[1001]"
         >
-          <div className="w-11 h-11 flex items-center justify-center rounded-xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-md">
+          <div className="w-14 h-14 flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-md">
             <img
               src={logo}
               alt="OMD Logo"
