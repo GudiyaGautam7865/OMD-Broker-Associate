@@ -20,11 +20,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-slate-200'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-5 left-35 right-40 z-[999] transition-all duration-500 bg-white backdrop-blur-lg border border-blur/10 rounded-4xl`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between">
 
@@ -43,17 +39,13 @@ export default function Navbar() {
 
           <div className="leading-tight">
             <h1
-              className={`text-lg font-black tracking-wider transition-colors duration-300 ${
-                scrolled ? 'text-blue-600' : 'text-white'
-              }`}
+              className="text-lg font-black tracking-wider text-blue-600"
             >
               OMD
             </h1>
 
             <p
-              className={`text-[11px] font-semibold uppercase tracking-[2px] transition-colors duration-300 ${
-                scrolled ? 'text-slate-500' : 'text-white/70'
-              }`}
+              className="text-[11px] font-semibold uppercase tracking-[2px] text-slate-500"
             >
               Broker Associate
             </p>
@@ -71,9 +63,7 @@ export default function Navbar() {
                 `px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 no-underline ${
                   isActive
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : scrolled
-                    ? 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                 }`
               }
             >
@@ -88,9 +78,7 @@ export default function Navbar() {
                 `px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 no-underline ${
                   isActive
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : scrolled
-                    ? 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                 }`
               }
             >
@@ -105,9 +93,7 @@ export default function Navbar() {
                 `px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 no-underline ${
                   isActive
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : scrolled
-                    ? 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                 }`
               }
             >
@@ -117,12 +103,14 @@ export default function Navbar() {
 
           {/* DOWNLOAD BUTTON */}
           <li>
-            <Link
-              to="/app#download"
+            <a
+              href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-2.5 rounded-xl font-bold shadow-lg hover:shadow-blue-500/40 hover:scale-105 hover:-translate-y-1 transition-all duration-300 no-underline"
             >
               📲 Download App
-            </Link>
+            </a>
           </li>
         </ul>
 
@@ -134,27 +122,13 @@ export default function Navbar() {
         >
           <div className="flex flex-col justify-center items-center gap-1.5">
             <span
-              className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-                scrolled ? 'bg-slate-800' : 'bg-white'
-              } ${
-                open ? 'rotate-45 translate-y-2' : ''
-              }`}
+              className={`w-6 h-0.5 rounded-full transition-all duration-300 bg-slate-800 ${open ? 'rotate-45 translate-y-2' : ''}`}
             />
-
             <span
-              className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-                scrolled ? 'bg-slate-800' : 'bg-white'
-              } ${
-                open ? 'opacity-0' : ''
-              }`}
+              className={`w-6 h-0.5 rounded-full transition-all duration-300 bg-slate-800 ${open ? 'opacity-0' : ''}`}
             />
-
             <span
-              className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-                scrolled ? 'bg-slate-800' : 'bg-white'
-              } ${
-                open ? '-rotate-45 -translate-y-2' : ''
-              }`}
+              className={`w-6 h-0.5 rounded-full transition-all duration-300 bg-slate-800 ${open ? '-rotate-45 -translate-y-2' : ''}`}
             />
           </div>
         </button>
@@ -168,7 +142,6 @@ export default function Navbar() {
           }`}
         >
           <div className="mx-4 mt-3 rounded-3xl overflow-hidden backdrop-blur-2xl bg-white/95 shadow-2xl border border-slate-200">
-
             <div className="flex flex-col p-4 gap-2">
 
               <NavLink
@@ -211,13 +184,16 @@ export default function Navbar() {
                 Contact
               </NavLink>
 
-              {/* MOBILE BUTTON */}
-              <Link
-                to="/app#download"
+              {/* ✅ Fixed: removed nested <Link> + <a>. Single <a> tag is correct here. */}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-center px-5 py-3 rounded-2xl font-bold shadow-lg hover:scale-[1.02] transition-all duration-300 no-underline"
               >
-              <a href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal" target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)', color: '#ffff', padding: '14px 32px', borderRadius: 14, fontWeight: 800, fontSize: '1rem', textDecoration: 'none', boxShadow: '0 4px 20px rgba(37,99,235,0.4)' }}>📲 Download Now</a>
-              </Link>
+                📲 Download Now
+              </a>
+
             </div>
           </div>
         </div>
